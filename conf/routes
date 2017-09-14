@@ -3,9 +3,10 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+GET     /                           jp.dcworks.webapi.stub.controllers.Application.index()
 
-GET     /app/api/v1/                controllers.WebApiStubController.index()
+# WebAPI stub
+GET     /app/api/v1/                jp.dcworks.webapi.stub.controllers.WebApiStubController.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -1,8 +1,4 @@
-/ApplicationTest.class
-/IntegrationTest$1.class
-/IntegrationTest.class
-/application.conf
-/controllers/
-/routes
-/views/
-/assets/
+/jp/
+/logger-local.xml
+/logger.xml
+/application-local-dev.conf

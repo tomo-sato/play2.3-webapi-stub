@@ -1,6 +1,6 @@
 name := """play2.3-webapi-stub"""
 
-version := "1.0-SNAPSHOT"
+version := "1.0.0"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
@@ -10,5 +10,8 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  javaWs
+  javaWs,
+// Add Library
+  "mysql" % "mysql-connector-java" % "5.1.38",
+  "org.json" % "json" % "20160212"
 )
