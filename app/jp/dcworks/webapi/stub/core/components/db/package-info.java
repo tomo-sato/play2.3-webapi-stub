@@ -19,5 +19,6 @@
  *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
+ * @version 1.1.0 2017/09/18 WebAPIスタブ一覧画面、詳細画面の製造。
  */
 package jp.dcworks.webapi.stub.core.components.db;

@@ -77,6 +77,17 @@ $ sh ./local.sh
 <br /><br />
 
 
+## リリースノート
+
+- 1.1.0 2017/09/19 スタブAPI一覧表示画面作成
+    - スタブAPIの一覧画面作成。
+    - スタブAPIの詳細画面作成。
+- 1.0.0 2017/09/18 初回リリース。
+    - スタブAPIの作成。
+
+<br /><br />
+
+
 ## ライセンス
 Copyright 2017 tomo-sato This software is licensed under the Apache 2 license, quoted below.
 

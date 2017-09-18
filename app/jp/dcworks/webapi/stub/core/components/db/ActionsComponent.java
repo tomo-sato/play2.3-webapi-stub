@@ -30,6 +30,7 @@ import jp.dcworks.webapi.stub.core.models.ext.ActionsJoin;
  *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
+ * @version 1.1.0 2017/09/18 WebAPIスタブ一覧画面、詳細画面の製造。
  */
 public class ActionsComponent {
 
@@ -82,7 +83,7 @@ public class ActionsComponent {
 	 * @return エンドポイントの一覧
 	 *
 	 * @author tomo-sato
-	 * @since 1.0.0 2017/09/18
+	 * @since 1.1.0 2017/09/18
 	 */
 	public static List<ActionsJoin> findAll() {
 

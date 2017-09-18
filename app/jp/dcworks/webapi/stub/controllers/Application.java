@@ -28,6 +28,7 @@ import play.mvc.Result;
  *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
+ * @version 1.1.0 2017/09/18 WebAPIスタブ一覧画面、詳細画面の製造。
  */
 public class Application extends Controller {
 
@@ -50,7 +51,7 @@ public class Application extends Controller {
 	 * @return Result
 	 *
 	 * @author tomo-sato
-	 * @since 1.0.0 2017/09/18
+	 * @since 1.1.0 2017/09/18
 	 */
 	public static Result list() {
 		// コンテンツを初期化。
@@ -69,7 +70,7 @@ public class Application extends Controller {
 	 * @return Result
 	 *
 	 * @author tomo-sato
-	 * @since 1.0.0 2017/09/18
+	 * @since 1.1.0 2017/09/18
 	 */
 	public static Result detail(String action) {
 		// コンテンツを初期化。

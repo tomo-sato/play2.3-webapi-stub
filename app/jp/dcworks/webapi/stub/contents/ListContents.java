@@ -26,7 +26,7 @@ import play.mvc.Controller;
  * 一覧画面（list.html）に表示するコンテンツを保持するクラス。
  *
  * @author tomo-sato
- * @since 1.0.0 2017/09/18
+ * @since 1.1.0 2017/09/18
  */
 public class ListContents extends Controller {
 
