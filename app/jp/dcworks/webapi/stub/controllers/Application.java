@@ -16,13 +16,71 @@
 
 package jp.dcworks.webapi.stub.controllers;
 
+import jp.dcworks.webapi.stub.contents.ListContents;
+import jp.dcworks.webapi.stub.core.components.db.ActionsComponent;
 import jp.dcworks.webapi.stub.views.html.index;
+import jp.dcworks.webapi.stub.views.html.list;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+/**
+ * アプリケーションコントローラクラス。
+ *
+ * @author tomo-sato
+ * @since 1.0.0 2017/09/15
+ */
 public class Application extends Controller {
 
+	/**
+	 * デフォルト定義のコントローラクラス。
+	 * <p>アプリケーション起動確認用に初期定義のまま提供している。
+	 *
+	 * @return Result
+	 *
+	 * @author tomo-sato
+	 * @since 1.0.0 2017/09/18
+	 */
 	public static Result index() {
 		return ok(index.render("Your new application is ready."));
+	}
+
+	/**
+	 * WebAPIスタブの一覧を表示する。
+	 *
+	 * @return Result
+	 *
+	 * @author tomo-sato
+	 * @since 1.0.0 2017/09/18
+	 */
+	public static Result list() {
+		// コンテンツを初期化。
+		ListContents contents = new ListContents();
+
+		// アクション一覧取得。
+		contents.actionsJoinList = ActionsComponent.findAll();
+
+		return ok(list.render(contents));
+	}
+
+	/**
+	 * WebAPIスタブの詳細を表示する。
+	 *
+	 * @param action アクション
+	 * @return Result
+	 *
+	 * @author tomo-sato
+	 * @since 1.0.0 2017/09/18
+	 */
+	public static Result detail(String action) {
+		// コンテンツを初期化。
+		ListContents contents = new ListContents();
+
+		// アクション一覧取得。
+		contents.actionsJoinList = ActionsComponent.findAll();
+
+		// アクションを取得する。
+		contents.actionsJoin = ActionsComponent.findByApiEndpoint(action);
+
+		return ok(list.render(contents));
 	}
 }

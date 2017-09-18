@@ -14,31 +14,31 @@
  * limitations under the License.
  */
 
-package jp.dcworks.webapi.stub.core.models;
+package jp.dcworks.webapi.stub.core.models.ext;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import jp.dcworks.webapi.stub.core.models.Actions;
+import jp.dcworks.webapi.stub.core.models.Responses;
 
 /**
- * アクション レスポンス紐付け（action_response_joins）モデル。
+ * アクション（actions）モデル。
  *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
  */
 @SuppressWarnings("serial")
-@Entity
-public class ActionResponseJoins extends AppModel {
+@Entity @Table(name="actions")
+public class ActionsJoin extends Actions {
 
-	/** アクションID */
-	@Column(name = "actions_id")
-	public Long actionsId;
-
-	/** レスポンスID */
-	@Column(name = "responses_id")
-	public Long responsesId;
+	/** responsesモデル */
+	@Transient
+	public Responses responses;
 
 	/** Finder */
-	public static Finder<Long, ActionResponseJoins> find = new Finder<Long, ActionResponseJoins>(
-		Long.class, ActionResponseJoins.class
+	public static Finder<Long, ActionsJoin> find = new Finder<Long, ActionsJoin>(
+		Long.class, ActionsJoin.class
 	);
 }

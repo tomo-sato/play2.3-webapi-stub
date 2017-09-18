@@ -14,31 +14,25 @@
  * limitations under the License.
  */
 
-package jp.dcworks.webapi.stub.core.models.join;
+package jp.dcworks.webapi.stub.contents;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import java.util.ArrayList;
+import java.util.List;
 
-import jp.dcworks.webapi.stub.core.models.Actions;
-import jp.dcworks.webapi.stub.core.models.Responses;
+import jp.dcworks.webapi.stub.core.models.ext.ActionsJoin;
+import play.mvc.Controller;
 
 /**
- * アクション（actions）モデル。
+ * 一覧画面（list.html）に表示するコンテンツを保持するクラス。
  *
  * @author tomo-sato
- * @since 1.0.0 2017/09/15
+ * @since 1.0.0 2017/09/18
  */
-@SuppressWarnings("serial")
-@Entity @Table(name="actions")
-public class ActionsJoin extends Actions {
+public class ListContents extends Controller {
 
-	/** responsesモデル */
-	@Transient
-	public Responses responses;
+	/** アクションリスト */
+	public List<ActionsJoin> actionsJoinList = new ArrayList<ActionsJoin>();
 
-	/** Finder */
-	public static Finder<Long, ActionsJoin> find = new Finder<Long, ActionsJoin>(
-		Long.class, ActionsJoin.class
-	);
+	/** アクション */
+	public ActionsJoin actionsJoin = null;
 }

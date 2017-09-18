@@ -29,17 +29,17 @@ import javax.persistence.Entity;
 @Entity
 public class Actions extends AppModel {
 
-	/** API Endpoint */
-	@Column(name = "api_endpoint")
-	public String apiEndpoint;
+	/** 機能詳細 */
+	@Column(name = "detail")
+	public String detail;
 
 	/** API名 */
 	@Column(name = "api_name")
 	public String apiName;
 
-	/** 機能詳細 */
-	@Column(name = "detail")
-	public String detail;
+	/** API Endpoint */
+	@Column(name = "api_endpoint")
+	public String apiEndpoint;
 
 	/** Finder */
 	public static Finder<Long, Actions> find = new Finder<Long, Actions>(

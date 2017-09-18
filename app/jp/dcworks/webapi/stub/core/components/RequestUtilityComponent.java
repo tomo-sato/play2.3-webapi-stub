@@ -23,7 +23,7 @@ import play.mvc.Http.Request;
 
 /**
  * Requestに関するユーティリティクラス。
- * 
+ *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
  */

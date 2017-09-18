@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.dcworks.webapi.stub.controllers;
+package jp.dcworks.webapi.stub.controllers.api;
 
 import jp.dcworks.webapi.stub.annotations.ParamsTrace;
 import play.mvc.Controller;
@@ -22,7 +22,7 @@ import play.mvc.Controller;
 /**
  * WebAPIコントローラー基底クラス。
  * <p>WebAPIを実装する場合、このクラスを継承する。
- * 
+ *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
  */

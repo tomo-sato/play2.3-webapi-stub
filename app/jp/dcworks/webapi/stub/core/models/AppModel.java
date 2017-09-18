@@ -31,7 +31,7 @@ import play.db.ebean.Model;
 /**
  * モデルの基底クラス。
  * <p>各モデルはこのクラスを継承する。
- * 
+ *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
  */
@@ -60,7 +60,7 @@ public class AppModel extends Model {
 
 	/**
 	 * 保存。
-	 * 
+	 *
 	 * @author tomo-sato
 	 * @since 1.0.0 2017/09/15
 	 * @see play.db.ebean.Model#save()
@@ -72,7 +72,7 @@ public class AppModel extends Model {
 
 	/**
 	 * 更新。
-	 * 
+	 *
 	 * @author tomo-sato
 	 * @since 1.0.0 2017/09/15
 	 * @see play.db.ebean.Model#update()
@@ -84,7 +84,7 @@ public class AppModel extends Model {
 
 	/**
 	 * 削除フラグを立てて更新。
-	 * 
+	 *
 	 * @author tomo-sato
 	 * @since 1.0.0 2017/09/15
 	 * @see play.db.ebean.Model#delete()
@@ -96,7 +96,7 @@ public class AppModel extends Model {
 
 	/**
 	 * 削除フラグを立てる。
-	 * 
+	 *
 	 * @author tomo-sato
 	 * @since 1.0.0 2017/09/15
 	 */

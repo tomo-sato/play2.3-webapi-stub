@@ -17,7 +17,7 @@
 package jp.dcworks.webapi.stub;
 
 
-import jp.dcworks.webapi.stub.controllers.AppWebApiController;
+import jp.dcworks.webapi.stub.controllers.api.AppWebApiController;
 import jp.dcworks.webapi.stub.core.components.AppLogger;
 import play.Application;
 import play.GlobalSettings;

@@ -28,7 +28,7 @@ import ch.qos.logback.classic.Logger;
 
 /**
  * フィールド操作に関する機能を提供します。
- * 
+ *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
  */

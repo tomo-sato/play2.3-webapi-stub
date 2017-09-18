@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package jp.dcworks.webapi.stub.controllers;
+package jp.dcworks.webapi.stub.controllers.api;
 
 import jp.dcworks.webapi.stub.core.components.db.ActionsComponent;
-import jp.dcworks.webapi.stub.core.models.join.ActionsJoin;
+import jp.dcworks.webapi.stub.core.models.ext.ActionsJoin;
 import play.mvc.Result;
 
 /**
