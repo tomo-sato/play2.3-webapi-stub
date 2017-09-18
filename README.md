@@ -45,7 +45,7 @@ DDLを実行します。
     - テーブルの作成。
 
 ER図<br />
-![play2.3-webapi-stub.png](https://github.com/tomo-sato/play2.3-webapi-stub/tree/master/doc/erd/play2.3-webapi-stub.png "play2.3-webapi-stub.png")
+![play2.3-webapi-stub.png](https://tomo-sato.github.io/play2.3-webapi-stub/doc/erd/play2.3-webapi-stub.png "play2.3-webapi-stub.png")
 
 <br /><br />
 
