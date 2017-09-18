@@ -34,6 +34,11 @@ public class WebApiStubController extends AppWebApiController {
 		Integer httpStatusCode = actions.responses.httpStatusCode;
 		String responseJson = actions.responses.responseJson;
 
+		// DBにエンドポイントが登録されていない場合。
+		if (responseJson == null || responseJson.length() <= 0) {
+			return notFound("レスポンスが取得できません。");
+		}
+
 		// レスポンス生成。
 		response().setContentType("application/json; charset=utf-8");
 		return status(httpStatusCode, responseJson);

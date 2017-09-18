@@ -17,7 +17,7 @@ import play.mvc.Result;
 
 /**
  * リクエスト、レスポンスパラメータのトレース中継処理クラス。
- * 
+ *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
  */
