@@ -2,8 +2,9 @@
 
 play2.3-webapi-stub は、 [Play Framework 2.3](https://www.playframework.com/documentation/ja/2.3.x/Home) で構築されたWebAPIのスタブアプリです。<br />
 URLで指定されたエンドポイントより、データベースで紐づくレスポンスを返却します。<br />
-レスポンスはすべてjsonを想定しています。<br />
-<br />
+レスポンスはすべてjsonを想定しています。
+
+<br /><br />
 
 
 ## ビルド方法
@@ -16,10 +17,11 @@ URLで指定されたエンドポイントより、データベースで紐づ�
     - [Play のインストール](https://www.playframework.com/documentation/ja/2.3.x/Installing)
 - データベースセットアップ（MySQL 5.6.x）
 
-<br />
+<br /><br />
+
 
 ### 開発環境構築方法
-#### アプリケーションセットアップ
+#### ●アプリケーションセットアップ
 
 アプリケーションをクローンします。
 ```
@@ -33,10 +35,11 @@ activator eclipse
 ```
 
 eclipse よりプロジェクトをインポートします。
+
 <br /><br />
 
 
-#### DBセットアップ
+#### ●DBセットアップ
 
 DDLを実行します。
 - [00_create_db_ddl.sql](https://github.com/tomo-sato/play2.3-webapi-stub/blob/master/doc/ddl/00_create_db_ddl.sql)
@@ -48,6 +51,7 @@ ER図<br />
 ![play2.3-webapi-stub.png](https://tomo-sato.github.io/play2.3-webapi-stub/doc/erd/play2.3-webapi-stub.png "play2.3-webapi-stub.png")
 
 <br /><br />
+
 
 ### 起動方法
 
