@@ -14,6 +14,7 @@ public class WebApiStubController extends AppWebApiController {
 
 	/**
 	 * スタブAPI メインアクション。
+	 * <p>エンドポイントの文字列よりレスポンスを取得する。
 	 *
 	 * @param action アクション
 	 * @return Result
@@ -24,7 +25,7 @@ public class WebApiStubController extends AppWebApiController {
 	public static Result index(String action) {
 
 		// アクションを取得する。
-		ActionsJoin actions =ActionsComponent.findByApiEndpoint(action);
+		ActionsJoin actions = ActionsComponent.findByApiEndpoint(action);
 
 		// DBにエンドポイントが登録されていない場合。
 		if (actions == null || actions.responses == null) {
