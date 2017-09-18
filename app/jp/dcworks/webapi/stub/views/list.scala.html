@@ -23,8 +23,6 @@
 		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
 		<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
 		<script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
-
-		<link rel="stylesheet" media="screen" href="/@@documentation/resources/style/main.css">
 	</head>
 	<body>
 		<section id="top">
@@ -39,7 +37,7 @@
 					<p>右メニュー「スタブAPI 一覧」よりスタブAPI実行結果を表示できます。</p>
 				}else{
 					<h1>スタブAPI実行結果</h1>
-					<h2><a href="http://@{request.host}/app/api/v1/@{contents.actionsJoin.apiEndpoint}">@contents.actionsJoin.apiEndpoint</a></h2>
+					<h2><a href="/app/api/v1/@{contents.actionsJoin.apiEndpoint}">@contents.actionsJoin.apiEndpoint</a></h2>
 					<p>※上記セクションタイトルのリンクより、エンドポイントのURLを取得できます。</p>
 					<ol>
 						<li>アクション（actions）テーブル
