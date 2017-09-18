@@ -25,13 +25,13 @@ URLで指定されたエンドポイントより、データベースで紐づ�
 
 アプリケーションをクローンします。
 ```
-git clone https://github.com/tomo-sato/play2.3-webapi-stub.git
+$ git clone https://github.com/tomo-sato/play2.3-webapi-stub.git
 ```
 
 アプリケーションフォルダに移動し、 eclipse でインポート可能なプロジェクト構成にします。
 ```
-cd play2.3-webapi-stub
-activator eclipse
+$ cd play2.3-webapi-stub
+$ activator eclipse
 ```
 
 eclipse よりプロジェクトをインポートします。
@@ -59,8 +59,8 @@ ER図<br />
 
 アプリケーションフォルダに移動し、起動スクリプトを実行します。
 ```
-cd play2.3-webapi-stub
-sh ./local.sh
+$ cd play2.3-webapi-stub
+$ sh ./local.sh
 ```
 （※Windows用起動スクリプトは `local.bat` を用意しています。）<br />
 
