@@ -26,6 +26,16 @@ public class WebApiStubController extends AppWebApiController {
 		// アクションを取得する。
 		ActionsJoin actions =ActionsComponent.findByApiEndpoint(action);
 
-		return ok(actions.responses.responseJson);
+		// DBにエンドポイントが登録されていない場合。
+		if (actions == null || actions.responses == null) {
+			return notFound("エンドポイントが見つかりません。");
+		}
+
+		Integer httpStatusCode = actions.responses.httpStatusCode;
+		String responseJson = actions.responses.responseJson;
+
+		// レスポンス生成。
+		response().setContentType("application/json; charset=utf-8");
+		return status(httpStatusCode, responseJson);
 	}
 }

@@ -17,6 +17,10 @@ public class Responses extends AppModel {
 	@Column(name = "response_json")
 	public String responseJson;
 
+	/** レスポンス json */
+	@Column(name = "http_status_code")
+	public Integer httpStatusCode;
+
 	/** 備考 */
 	@Column(name = "note")
 	public String note;

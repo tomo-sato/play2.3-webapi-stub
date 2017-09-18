@@ -84,7 +84,8 @@ public class AppLogger {
 	/**
 	 * 通常のロガーに差し替える。
 	 *
-	 * @since 1.0
+	 * @author tomo-sato
+	 * @since 1.0.0 2017/09/15
 	 */
 	public static void resetLogger() {
 		// ロガーの差し替え
@@ -100,7 +101,9 @@ public class AppLogger {
 	 * <li>その他異常系のエラー
 	 * </ul>
 	 * @param message ログ出力メッセージ
-	 * @since 1.0
+	 *
+	 * @author tomo-sato
+	 * @since 1.0.0 2017/09/15
 	 */
 	public static void error(String message) {
 		if (MY_LOGGER.isErrorEnabled()) {
@@ -243,7 +246,9 @@ public class AppLogger {
 	/**
 	 * MDCにセットしたキーを破棄する。
 	 * @param key キー
-	 * @since 1.0
+	 *
+	 * @author tomo-sato
+	 * @since 1.0.0 2017/09/15
 	 */
 	public static void removeMDC(String key) {
 		if (StringUtils.isEmptyWithTrim(key)) {

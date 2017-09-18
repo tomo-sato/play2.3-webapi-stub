@@ -126,7 +126,9 @@ public class DateUtils {
 	 *
 	 * @param date 取得対象の日付
 	 * @return 日を取得
-	 * @since 1.0
+	 *
+	 * @author tomo-sato
+	 * @since 1.0.0 2017/09/15
 	 */
 	public static int getDay(Date date) {
 		Calendar cal = Calendar.getInstance();
@@ -158,7 +160,9 @@ public class DateUtils {
 	 * @param hour 時 0〜23
 	 * @param min 分 0〜59
 	 * @return 日付を取得
-	 * @since 1.0
+	 *
+	 * @author tomo-sato
+	 * @since 1.0.0 2017/09/15
 	 */
 	public static Date getDate(int year, int month, int day, int hour, int min) {
 		// Dateを生成
