@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 
 /**
  * レスポンス（responses）モデル。
- * 
+ *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
  */
@@ -20,4 +20,9 @@ public class Responses extends AppModel {
 	/** 備考 */
 	@Column(name = "note")
 	public String note;
+
+	/** Finder */
+	public static Finder<Long, Responses> find = new Finder<Long, Responses>(
+		Long.class, Responses.class
+	);
 }

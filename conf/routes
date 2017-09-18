@@ -6,7 +6,7 @@
 GET     /                           jp.dcworks.webapi.stub.controllers.Application.index()
 
 # WebAPI stub
-GET     /app/api/v1/                jp.dcworks.webapi.stub.controllers.WebApiStubController.index()
+GET     /app/api/v1/*action         jp.dcworks.webapi.stub.controllers.WebApiStubController.index(action: String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 
 /**
  * アクション（actions）モデル。
- * 
+ *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
  */
@@ -24,4 +24,9 @@ public class Actions extends AppModel {
 	/** 機能詳細 */
 	@Column(name = "detail")
 	public String detail;
+
+	/** Finder */
+	public static Finder<Long, Actions> find = new Finder<Long, Actions>(
+		Long.class, Actions.class
+	);
 }
