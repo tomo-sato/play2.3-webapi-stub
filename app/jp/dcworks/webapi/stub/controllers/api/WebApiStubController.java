@@ -60,7 +60,7 @@ public class WebApiStubController extends AppWebApiController {
 
 		try {
 			// レスポンス時間を任意で調整する。
-			Thread.sleep(actions.responses.sleepTimeSeconds);
+			Thread.sleep(actions.responses.sleepTimeSeconds * 1000);
 		} catch (Exception e) {}
 
 		// レスポンス生成。

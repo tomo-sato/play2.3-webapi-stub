@@ -47,6 +47,9 @@ DDLを実行します。
 - [01_create_table_ddl.sql](https://github.com/tomo-sato/play2.3-webapi-stub/blob/master/doc/ddl/01_create_table_ddl.sql)
     - テーブルの作成。
 
+※以前のバージョンからテーブルを更新する場合は、以下のupdate用ddlを参照ください。バージョンごとにddlをアップしています。
+- [update用ddl保存フォルダ](https://github.com/tomo-sato/play2.3-webapi-stub/blob/master/doc/ddl/update_ddl)
+
 ER図<br />
 ![play2.3-webapi-stub.png](https://tomo-sato.github.io/play2.3-webapi-stub/doc/erd/play2.3-webapi-stub.png "play2.3-webapi-stub.png")
 
