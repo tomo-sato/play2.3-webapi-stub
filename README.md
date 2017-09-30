@@ -75,7 +75,7 @@ $ sh ./local.sh
 
 ## ドキュメント
 
-- [play2.3-webapi-stub アプリケーションベース API仕様](https://tomo-sato.github.io/play2.3-webapi/javadoc/index.html)
+- [play2.3-webapi-stub アプリケーションベース API仕様](https://tomo-sato.github.io/play2.3-webapi-stub/doc/JavaDoc/index.html)
 
 <br /><br />
 
