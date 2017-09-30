@@ -25,6 +25,7 @@ import play.mvc.Result;
  *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
+ * @version 1.2.0 2017/09/30 レスポンス時間を任意で調整する機能追加。
  */
 public class WebApiStubController extends AppWebApiController {
 
@@ -37,6 +38,7 @@ public class WebApiStubController extends AppWebApiController {
 	 *
 	 * @author tomo-sato
 	 * @since 1.0.0 2017/09/15
+	 * @version 1.2.0 2017/09/30 レスポンス時間を任意で調整する機能追加。
 	 */
 	public static Result index(String action) {
 
@@ -55,6 +57,11 @@ public class WebApiStubController extends AppWebApiController {
 		if (responseJson == null || responseJson.length() <= 0) {
 			return notFound("レスポンスが取得できません。");
 		}
+
+		try {
+			// レスポンス時間を任意で調整する。
+			Thread.sleep(actions.responses.sleepTimeSeconds);
+		} catch (Exception e) {}
 
 		// レスポンス生成。
 		response().setContentType("application/json; charset=utf-8");

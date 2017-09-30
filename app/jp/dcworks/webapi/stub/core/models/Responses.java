@@ -24,6 +24,7 @@ import javax.persistence.Entity;
  *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
+ * @version 1.2.0 2017/09/30 レスポンス時間を任意で調整するパラメータ追加。
  */
 @SuppressWarnings("serial")
 @Entity
@@ -36,6 +37,10 @@ public class Responses extends AppModel {
 	/** HTTPステータスコード */
 	@Column(name = "http_status_code")
 	public Integer httpStatusCode;
+
+	/** スリープ時間（デフォルト：0秒） */
+	@Column(name = "sleep_time_seconds")
+	public Integer sleepTimeSeconds;
 
 	/** 備考 */
 	@Column(name = "note")
