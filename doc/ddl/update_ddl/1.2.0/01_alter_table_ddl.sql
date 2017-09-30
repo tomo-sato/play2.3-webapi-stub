@@ -5,10 +5,5 @@
 -- -----------------------------------------------------
 -- Table `webapi_stub`.`responses`
 -- -----------------------------------------------------
-ALTER TABLE `webapi_stub`.`responses` 
+ALTER TABLE `webapi_stub`.`responses`
 ADD COLUMN `sleep_time_seconds` INT(11) NOT NULL DEFAULT 0 COMMENT 'スリープ時間（デフォルト：0秒）' AFTER `http_status_code`;
-
-
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
