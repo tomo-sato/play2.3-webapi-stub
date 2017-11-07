@@ -45,6 +45,10 @@ public class Responses extends AppModel {
 	/** 備考 */
 	@Column(name = "note")
 	public String note;
+	
+	/** アクションID */
+	@Column(name = "actions_id")
+	public String actionsId;
 
 	/** Finder */
 	public static Finder<Long, Responses> find = new Finder<Long, Responses>(

@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.dcworks.webapi.stub.core.models.ext.ActionsJoin;
+import jp.dcworks.webapi.stub.core.models.Responses;
 import play.mvc.Controller;
 
 /**
@@ -32,6 +33,9 @@ public class ListContents extends Controller {
 
 	/** アクションリスト */
 	public List<ActionsJoin> actionsJoinList = new ArrayList<ActionsJoin>();
+	
+	/** レスポンスリスト */
+	public List<Responses> responseList = new ArrayList<Responses>();
 
 	/** アクション */
 	public ActionsJoin actionsJoin = null;

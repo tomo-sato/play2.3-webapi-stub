@@ -8,6 +8,7 @@ GET     /                           jp.dcworks.webapi.stub.controllers.Applicati
 GET     /list                       jp.dcworks.webapi.stub.controllers.Application.list()
 
 GET     /detail/*action             jp.dcworks.webapi.stub.controllers.Application.detail(action: String)
+POST     /detail/*action             jp.dcworks.webapi.stub.controllers.Application.detail(action: String)
 
 # WebAPI stub
 GET     /app/api/v1/*action         jp.dcworks.webapi.stub.controllers.api.WebApiStubController.index(action: String)

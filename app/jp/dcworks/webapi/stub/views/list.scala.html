@@ -23,6 +23,20 @@
 		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
 		<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
 		<script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				$("#textarea").css("white-space","nowrap");
+				$("#textarea").css("font-family","arial unicode ms");
+				$("#textarea").css("font-size","15px");
+				$("#textarea").width($("#box").width());
+				if($("#textarea").get(0).scrollHeight > $("#textarea").get(0).offsetHeight){
+					$("#textarea").height($("#textarea").get(0).scrollHeight);
+				}
+			});
+		</script>
+
 	</head>
 	<body>
 		<section id="top">
@@ -48,6 +62,19 @@
 								<li>API Endpoint：<code>@contents.actionsJoin.apiEndpoint</code></li>
 							</ol>
 						</li>
+						
+						<br>
+						<form method="get">
+							<ul>
+								@for(Responses <- contents.responseList){
+									<li><input type="radio" name="responsesId" value=@Responses.id @if(Responses.id == contents.actionsJoin.responses.id){checked}>ID：<code>@Responses.id</code>　　<code>@Responses.note</code> </li>
+								}
+							</ul>
+							<input type="hidden" name="actionsId" value="@contents.actionsJoin.id">
+							<input type="submit" value="レスポンス変更">
+						</form>
+						<br>
+						
 						<li>レスポンス（responses）テーブル
 							<ol>
 								<li>ID：<code>@contents.actionsJoin.responses.id</code></li>
@@ -58,7 +85,11 @@
 									@if(contents.actionsJoin.responses.responseJson == null || contents.actionsJoin.responses.responseJson == ""){
 									<blockquote><p>※レスポンスjsonは設定されていません。</p></blockquote>
 									}else{
-									<pre class="prettyprint prettyprinted"><code class="language-json">@contents.actionsJoin.responses.responseJson</code></pre>
+									<form method="post">
+										<pre class="prettyprint prettyprinted" id="box"><textArea name="json" class="language-json" id="textarea">@contents.actionsJoin.responses.responseJson</textArea></pre>
+										<input type="hidden" name="responsesId" value="@contents.actionsJoin.responses.id">
+										<input type="submit" value="レスポンス更新">
+									</form>
 									}
 								</li>
 							</ol>
@@ -66,6 +97,7 @@
 					</ol>
 				}
 			</article>
+			
 
 			<aside>
 				<h3>スタブAPI 一覧</h3>
