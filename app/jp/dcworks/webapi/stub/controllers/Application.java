@@ -16,21 +16,23 @@
 
 package jp.dcworks.webapi.stub.controllers;
 
+import java.util.Map;
+
 import jp.dcworks.webapi.stub.contents.ListContents;
-import jp.dcworks.java.common_tools.CheckUtils;
 import jp.dcworks.webapi.stub.core.components.db.ActionsComponent;
 import jp.dcworks.webapi.stub.views.html.index;
 import jp.dcworks.webapi.stub.views.html.list;
+import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
-import java.util.Map;
-import play.data.Form;
 
 /**
  * アプリケーションコントローラクラス。
  *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
+ *
+ * @version 1.3.0 2017/11/07 レスポンスを編集できるよう機能追加。
  * @version 1.1.0 2017/09/18 WebAPIスタブ一覧画面、詳細画面の製造。
  */
 public class Application extends Controller {
@@ -76,7 +78,7 @@ public class Application extends Controller {
 	 * @since 1.1.0 2017/09/18
 	 */
 	public static Result detail(String action) {
-		
+
 		Map<String, String[]> queryStrings = request().queryString();
 		if(Form.form().bindFromRequest().get("actionsId") != null && Form.form().bindFromRequest().get("actionsId") != ""){
 			long actionId = Long.parseLong(Form.form().bindFromRequest().get("actionsId"));
@@ -86,7 +88,7 @@ public class Application extends Controller {
 			long responsesId = Long.parseLong(Form.form().bindFromRequest().get("responsesId"));
 			ActionsComponent.updateResponse(Form.form().bindFromRequest().get("json"), responsesId);
 		}
-		
+
 		// コンテンツを初期化。
 		ListContents contents = new ListContents();
 
@@ -95,12 +97,12 @@ public class Application extends Controller {
 
 		// アクションを取得する。
 		contents.actionsJoin = ActionsComponent.findByApiEndpoint(action);
-		
+
 		// レスポンスを取得する。
 		if(contents.actionsJoin != null){
 			contents.responseList = ActionsComponent.findResponseByActionsId(contents.actionsJoin.id);
 		}
-		
+
 		return ok(list.render(contents));
 	}
 }

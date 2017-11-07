@@ -30,6 +30,8 @@ import jp.dcworks.webapi.stub.core.models.ext.ActionsJoin;
  *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
+ * 
+ * @version 1.3.0 2017/11/07 レスポンスを編集できるよう機能追加。
  * @version 1.1.0 2017/09/18 WebAPIスタブ一覧画面、詳細画面の製造。
  */
 public class ActionsComponent {
@@ -138,66 +140,66 @@ public class ActionsComponent {
 
 		return retList;
 	}
-	
+
 	/**
 	 * 有効なレスポンス一覧を取得する。
 	 *
-	 * @param アクションID
+	 * @param actionId アクションID
 	 * @return レスポンスの一覧
 	 *
 	 * @author y.marui
-	 * @since 1.1.0 2017/11/07
+	 * @since 1.3.0 2017/11/07
 	 */
 	public static List<Responses> findResponseByActionsId(Long actionId) {
-		
+
 		// レスポンステーブルを検索
 		List<Responses> responsesList = Responses.find
 				.where()
 				.eq("delete_flg", false)
 				.eq("actions_id", actionId)
 				.findList();
-		
+
 		return responsesList;
 	}
-	
+
 	/**
 	 * アクション-レスポンステーブルの値を変更する
 	 *
-	 * @param アクションID
-	 * @param レスポンスID
+	 * @param actionsId アクションID
+	 * @param responsesId レスポンスID
 	 *
 	 * @author y.marui
-	 * @since 1.1.0 2017/11/07
+	 * @since 1.3.0 2017/11/07
 	 */
 	public static void updateActionResponseJoins(Long actionsId, Long responsesId) {
-		
+
 		ActionResponseJoins actionResponseJoin = ActionResponseJoins.find
 				.where()
 				.eq("delete_flg", false)
 				.eq("actions_id", actionsId)
 				.findUnique();
-		
+
 		actionResponseJoin.responsesId = responsesId;
 		actionResponseJoin.update();
 	}
-	
+
 	/**
 	 * レスポンステーブルの値を変更する
 	 *
-	 * @param レスポンスのjson
-	 * @param レスポンスID
+	 * @param json レスポンスのjson
+	 * @param responsesId レスポンスID
 	 *
 	 * @author y.marui
-	 * @since 1.1.0 2017/11/07
+	 * @since 1.3.0 2017/11/07
 	 */
 	public static void updateResponse(String json, Long responsesId) {
-		
+
 		Responses response = Responses.find
 				.where()
 				.eq("delete_flg", false)
 				.eq("id", responsesId)
 				.findUnique();
-		
+
 		response.responseJson = json;
 		response.update();
 	}
