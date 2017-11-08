@@ -64,7 +64,7 @@
 						</li>
 						
 						<br>
-						<form method="get">
+						<form method="post">
 							<ul>
 								@for(Responses <- contents.responseList){
 									<li><input type="radio" name="responsesId" value=@Responses.id @if(Responses.id == contents.actionsJoin.responses.id){checked}>ID：<code>@Responses.id</code>　　<code>@Responses.note</code> </li>
