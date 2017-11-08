@@ -82,6 +82,9 @@ $ sh ./local.sh
 
 ## リリースノート
 
+- [1.3.0 2017/11/07 レスポンスを編集できるよう機能追加。](https://github.com/tomo-sato/play2.3-webapi-stub/releases/tag/play2.3-webapi-stub_1.3.0)
+    - レスポンスを編集できるよう機能追加。
+    - レスポンスを選択できるよう機能追加。
 - [1.2.0 2017/09/19 レスポンス時間を任意で調整する機能追加。](https://github.com/tomo-sato/play2.3-webapi-stub/releases/tag/play2.3-webapi-stub_1.2.0)
     - レスポンス時間を任意で調整するパラメータ追加。
 - [1.1.0 2017/09/19 スタブAPI一覧表示画面作成。](https://github.com/tomo-sato/play2.3-webapi-stub/releases/tag/play2.3-webapi-stub_1.1.0)

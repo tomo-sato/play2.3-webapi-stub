@@ -24,6 +24,8 @@ import javax.persistence.Entity;
  *
  * @author tomo-sato
  * @since 1.0.0 2017/09/15
+ * 
+ * @version 1.3.0 2017/11/07 レスポンスを編集できるよう機能追加。
  * @version 1.2.0 2017/09/30 レスポンス時間を任意で調整するパラメータ追加。
  */
 @SuppressWarnings("serial")
@@ -45,7 +47,7 @@ public class Responses extends AppModel {
 	/** 備考 */
 	@Column(name = "note")
 	public String note;
-	
+
 	/** アクションID */
 	@Column(name = "actions_id")
 	public String actionsId;
