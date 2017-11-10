@@ -80,13 +80,18 @@ public class Application extends Controller {
 	public static Result detail(String action) {
 
 		Map<String, String[]> queryStrings = request().queryString();
-		if(Form.form().bindFromRequest().get("actionsId") != null && Form.form().bindFromRequest().get("actionsId") != ""){
+		if(Form.form().bindFromRequest().get("updateRes") != null && Form.form().bindFromRequest().get("updateRes") != ""){
 			long actionId = Long.parseLong(Form.form().bindFromRequest().get("actionsId"));
 			long responsesId = Long.parseLong(Form.form().bindFromRequest().get("responsesId"));
 			ActionsComponent.updateActionResponseJoins(actionId, responsesId);
-		}else if(Form.form().bindFromRequest().get("json") != null && Form.form().bindFromRequest().get("json") != ""){
+		}else if(Form.form().bindFromRequest().get("updateJson") != null && Form.form().bindFromRequest().get("updateJson") != ""){
 			long responsesId = Long.parseLong(Form.form().bindFromRequest().get("responsesId"));
 			ActionsComponent.updateResponse(Form.form().bindFromRequest().get("json"), responsesId);
+		}else if(Form.form().bindFromRequest().get("addResponse") != null && Form.form().bindFromRequest().get("addResponse") != ""){
+			long actionId = Long.parseLong(Form.form().bindFromRequest().get("actionsId"));
+			String json = Form.form().bindFromRequest().get("json");
+			String note = Form.form().bindFromRequest().get("note");
+			ActionsComponent.addResponse(actionId, json, note);
 		}
 
 		// コンテンツを初期化。

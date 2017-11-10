@@ -203,4 +203,24 @@ public class ActionsComponent {
 		response.responseJson = json;
 		response.update();
 	}
+	
+	/**
+	 * レスポンステーブルにデータを追加する
+	 *
+	 * @param actionId アクションID
+	 * @param json レスポンスのjson
+	 * @param note 備考
+	 *
+	 * @author y.marui
+	 * @since 1.3.0 2017/11/10
+	 */
+	public static void addResponse(Long actionId, String json, String note) {
+		Responses response = new Responses();
+		response.responseJson = json;
+		response.httpStatusCode = 200;
+		response.note = note;
+		response.actionsId = actionId;
+		response.sleepTimeSeconds = 0;
+		response.save();
+	}
 }

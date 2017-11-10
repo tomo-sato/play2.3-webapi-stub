@@ -50,7 +50,7 @@ public class Responses extends AppModel {
 
 	/** アクションID */
 	@Column(name = "actions_id")
-	public String actionsId;
+	public Long actionsId;
 
 	/** Finder */
 	public static Finder<Long, Responses> find = new Finder<Long, Responses>(

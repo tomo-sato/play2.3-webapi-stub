@@ -34,6 +34,16 @@
 				if($("#textarea").get(0).scrollHeight > $("#textarea").get(0).offsetHeight){
 					$("#textarea").height($("#textarea").get(0).scrollHeight);
 				}
+
+
+				$("#resInput").css("display","none");
+				$("#resInput").css("border","solid 1px #000000");
+				$("#resInput").css("padding","10px");
+				$("#addRes").css("margin-bottom","15px");
+				$("#addRes").click(function(){
+					$("#addRes").css("display","none");
+					$("#resInput").css("display","block");
+				});
 			});
 		</script>
 
@@ -71,10 +81,21 @@
 								}
 							</ul>
 							<input type="hidden" name="actionsId" value="@contents.actionsJoin.id">
-							<input type="submit" value="レスポンス変更">
+							<input type="submit" value="レスポンス変更" name="updateRes">
 						</form>
 						<br>
 						
+						<button id="addRes">レスポンス追加</button>
+						<div id="resInput">
+							<form method="post">
+								<ul>
+									<li>備考：<input type="textfield" name="note"></li>
+									<li>レスポンス：<input type="textfield" name="json"></li>
+									<input type="submit" value="レスポンスを追加する" name="addResponse">
+									<input type="hidden" name="actionsId" value="@contents.actionsJoin.id">
+								</ul>
+							</form>
+						</div>
 						<li>レスポンス（responses）テーブル
 							<ol>
 								<li>ID：<code>@contents.actionsJoin.responses.id</code></li>
@@ -88,7 +109,7 @@
 									<form method="post">
 										<pre class="prettyprint prettyprinted" id="box"><textArea name="json" class="language-json" id="textarea">@contents.actionsJoin.responses.responseJson</textArea></pre>
 										<input type="hidden" name="responsesId" value="@contents.actionsJoin.responses.id">
-										<input type="submit" value="レスポンス更新">
+										<input type="submit" value="レスポンス更新" name="updateJson">
 									</form>
 									}
 								</li>
